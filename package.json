@@ -1,10 +1,11 @@
 {
-  "name": "react-native-clippathview",
+  "name": "@react-native-oh-tpl/react-native-clippathview",
   "title": "React Native ClipPath",
-  "version": "1.1.8",
-  "description": "ClipPath Android Web IOS",
+  "version": "1.1.8-0.0.1",
+  "description": "ClipPath Android Web IOS Harmony",
   "main": "index.js",
   "files": [
+    "marmony",
     "README.md",
     "android",
     "index.js",
