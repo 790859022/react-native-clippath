@@ -1,6 +1,6 @@
 {
   "module": {
-    "name": "ClipPath",
+    "name": "clip_path",
     "type": "har",
     "deviceTypes": [
       "default",

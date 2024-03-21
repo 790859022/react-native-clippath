@@ -1,6 +1,6 @@
 @Component
 export struct MainPage {
-  @State message: string = 'Clip Path';
+  @State message: string = 'Hello World';
 
   build() {
     Row() {
@@ -8,7 +8,6 @@ export struct MainPage {
         Text(this.message)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
-          .backgroundColor(Color.Blue)
       }
       .width('100%')
     }
