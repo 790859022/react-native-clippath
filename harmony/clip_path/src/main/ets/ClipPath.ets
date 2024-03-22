@@ -9,9 +9,14 @@ export const CLIP_PATH_TYPE: string = "ClipPath"
 export interface ClipPathProps extends ViewBaseProps {
   color?: string;
   openClip?: boolean;
-  d?: string;
-  viewBox?: TViewBox;
   fill?: string;
+
+  svgKey?: string;
+  d?: string;
+  align?: string;
+  aspect?: string;
+  fillRule?: string;
+  viewBox?: TViewBox;
   strokeWidth?: number;
   strokeCap?: LineCapStyle;
   strokeJoin?: LineJoinStyle;
