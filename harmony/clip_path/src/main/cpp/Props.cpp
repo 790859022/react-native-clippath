@@ -22,6 +22,8 @@ namespace facebook {
               color(convertRawProp(context, rawProps, "color", sourceProps.color, {})),
               openClip(convertRawProp(context, rawProps, "openClip", sourceProps.openClip, {})),
               fill(convertRawProp(context, rawProps, "fill", sourceProps.fill, {})),
+
+              svgKey(convertRawProp(context, rawProps, "svgKey", sourceProps.svgKey, {})),
               d(convertRawProp(context, rawProps, "d", sourceProps.d, {})),
               viewBox(convertRawProp(context, rawProps, "viewBox", sourceProps.viewBox, {})),
               align(convertRawProp(context, rawProps, "align", sourceProps.align, {})),
@@ -40,6 +42,7 @@ namespace facebook {
               transPercentageValue(
                   convertRawProp(context, rawProps, "transPercentageValue", sourceProps.transPercentageValue, {})),
               rot(convertRawProp(context, rawProps, "rot", sourceProps.rot, {})),
+              rotO(convertRawProp(context, rawProps, "rotO", sourceProps.rotO, {})),
               rotOx(convertRawProp(context, rawProps, "rotOx", sourceProps.rotOx, {})),
               rotOy(convertRawProp(context, rawProps, "rotOy", sourceProps.rotOy, {})),
               rotPercentageValue(

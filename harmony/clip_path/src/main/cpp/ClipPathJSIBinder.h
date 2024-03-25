@@ -8,6 +8,8 @@ namespace rnoh {
             object.setProperty(rt, "color", "string");
             object.setProperty(rt, "openClip", "boolean");
             object.setProperty(rt, "fill", "string");
+        
+            object.setProperty(rt, "svgKey", "string");
             object.setProperty(rt, "d", "string");
             object.setProperty(rt, "viewBox", "array");
             object.setProperty(rt, "align", "string");
@@ -25,6 +27,7 @@ namespace rnoh {
             object.setProperty(rt, "transY", "int");
             object.setProperty(rt, "transPercentageValue", "boolean");
             object.setProperty(rt, "rot", "int");
+            object.setProperty(rt, "rotO", "int");
             object.setProperty(rt, "rotOx", "int");
             object.setProperty(rt, "rotOy", "int");
             object.setProperty(rt, "rotPercentageValue", "boolean");

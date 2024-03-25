@@ -44,6 +44,7 @@ class ClipPathProps final : public ViewProps {
   int transY{};
   bool transPercentageValue{false};
   int rot{};
+  int rotO{};
   int rotOx{};
   int rotOy{};
   bool rotPercentageValue{false};

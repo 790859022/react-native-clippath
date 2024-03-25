@@ -19,17 +19,32 @@
 
 
 #### 属性
-| 属性    | 描述                                | 类型             | 默认值      | 平台            | 鸿蒙化说明 |
-|---------|-----------------------------------|------------------|-------------|-----------------|------------|
-| svgKey  | 唯一key                             | String           | -           | IOS/Android/Web | 同源库一致 |
-| d       | 形状由一系列命令定义（svg path data） | string           | -           | IOS/Android/Web | 同源库一致 |
-| viewBox | 定义用户空间中的位置和维度          | Array<Number>(4) | [0,0,-1,-1] |                 |            |
-|align||||||
-|aspect||||||
-|fillRule||||||
-|strokeWidth||||||
-|strokeCap||||||
-|strokeJoin||||||
-|strokeMiter||||||
-|strokeStart||||||
-|strokeEnd||||||
+| 属性                 | 描述                                | 类型             | 默认值      | 平台            | 鸿蒙化说明 |
+|----------------------|-------------------------------------|------------------|-------------|-----------------|------------|
+| svgKey               | 唯一key                             | String           | -           | IOS/Android/Web | 同源库一致 |
+| d                    | 形状由一系列命令定义（svg path data） | string           | -           | IOS/Android/Web | 同源库一致 |
+| viewBox              | 定义用户空间中的位置和维度          | Array<Number>(4) | [0,0,-1,-1] |                 |            |
+| align                | preserveAspectRatio 属性的 align    | string           |             |                 |            |
+| aspect               |                                     |                  |             |                 |            |
+| fillRule             |                                     |                  |             |                 |            |
+| strokeWidth          |                                     |                  |             |                 |            |
+| strokeCap            |                                     |                  |             |                 |            |
+| strokeJoin           |                                     |                  |             |                 |            |
+| strokeMiter          |                                     |                  |             |                 |            |
+| strokeStart          |                                     |                  |             |                 |            |
+| strokeEnd            |                                     |                  |             |                 |            |
+| translateZ           |                                     |                  |             |                 |            |
+| transX               |                                     |                  |             |                 |            |
+| transY               |                                     |                  |             |                 |            |
+| transPercentageValue |                                     |                  |             |                 |            |
+| rot                  |                                     |                  |             |                 |            |
+| rotOx                |                                     |                  |             |                 |            |
+| rotOy                |                                     |                  |             |                 |            |
+| rotPercentageValue   | 设置旋转中心点是否使用百分比        |                  |             |                 |            |
+| sc                   |                                     |                  |             |                 |            |
+| scX                  |                                     |                  |             |                 |            |
+| scY                  |                                     |                  |             |                 |            |
+| scO                  |                                     |                  |             |                 |            |
+| scOx                 |                                     |                  |             |                 |            |
+| scOy                 |                                     |                  |             |                 |            |
+| scPercentageValue    | 设置缩放中心点是否使用百分比        |                  |             |                 |            |

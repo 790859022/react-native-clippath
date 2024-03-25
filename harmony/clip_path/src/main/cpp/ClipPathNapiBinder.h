@@ -25,6 +25,7 @@ namespace rnoh {
                 propsObjBuilder.addProperty("color", props->color);
                 propsObjBuilder.addProperty("openClip", props->openClip);
                 propsObjBuilder.addProperty("fill", props->fill);
+                propsObjBuilder.addProperty("svgKey", props->svgKey);
                 propsObjBuilder.addProperty("d", props->d);
                 propsObjBuilder.addProperty("viewBox", viewBoxArray);
                 propsObjBuilder.addProperty("align", props->align);
@@ -41,6 +42,7 @@ namespace rnoh {
                 propsObjBuilder.addProperty("transY", props->transY);
                 propsObjBuilder.addProperty("transPercentageValue", props->transPercentageValue);
                 propsObjBuilder.addProperty("rot", props->rot);
+                propsObjBuilder.addProperty("rotO", props->rotO);
                 propsObjBuilder.addProperty("rotOx", props->rotOx);
                 propsObjBuilder.addProperty("rotOy", props->rotOy);
                 propsObjBuilder.addProperty("rotPercentageValue", props->rotPercentageValue);
