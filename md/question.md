@@ -1,3 +1,13 @@
+---
+html:
+  embed_local_images: true
+  embed_svg: true
+  offline: false
+  toc: undefined
+
+print_background: false
+---
+
 ## Clip Path ArcTS 实现问题
 
 #### 说明表
@@ -54,12 +64,15 @@
                 commands: this.d,
             })
         }
-        .zIndex(this.translateZ) // 无效
+        .zIndex(this.translateZ) // 无效P
 
         ClipPathView({
             translateZ: 1 // 无效
         })
         .zIndex(2) // 有效果
+
+<img src="./001.png" width="400" />
+<img src="./002.png" width="400" />
 
 <br>
 <br>
