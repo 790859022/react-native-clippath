@@ -1,4 +1,4 @@
-## ArcTS 实现问题记录
+## ArcTS 实现问题
 - SVG preserveAspectRatio 属性目前不支持
     - 该属性解决 viewBox 和 svg 宽高比不一致，图像展示问题。
     - preserveAspectRatio: none 图像会根据svg的宽高填满整个区域。
@@ -20,12 +20,6 @@
             translateZ: 1 // 无效
         })
         .zIndex(2) // 有效果
-
-
-
-
-
-
 <br>
 <br>
 <br>
@@ -51,14 +45,14 @@
   transX?: number;【√】
   transY?: number;【√】
   transPercentageValue?: boolean; 【√】
-  rot?: number;
-  rotOx?: number;
-  rotOy?: number;
-  rotPercentageValue?: boolean;
-  sc?: number;
-  scX?: number;
-  scY?: number;
-  scO?: number;
-  scOx?: number;
-  scOy?: number;
-  scPercentageValue?: boolean;
+  rot?: number;【√】
+  rotOx?: number;【√】
+  rotOy?: number;【√】
+  rotPercentageValue?: boolean;【√】
+  sc?: number;【√】
+  scX?: number;【√】
+  scY?: number;【√】
+  scO?: number;【√】
+  scOx?: number;【√】
+  scOy?: number;【√】
+  scPercentageValue?: boolean;【√】

@@ -3,4 +3,5 @@
 // import ClipPathH from 'react-native-clippathview/src/ClipPathH'
 // export const ClipPathViewH = ClipPathH
 // export const ClipPathView = ClipPath
-export * from './src/ClipPathNativeComponent'
+import ClipPath from './src/ClipPathNativeComponent'
+export default ClipPath

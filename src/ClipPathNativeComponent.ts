@@ -40,6 +40,6 @@ export interface NativeProps extends ViewProps {
     scPercentageValue?: WithDefault<boolean, false>;
   }
 
-export default (codegenNativeComponent<NativeProps>(
+export default codegenNativeComponent<NativeProps>(
   "ClipPath"
-): HostComponent<NativeProps>);
+) as HostComponent<NativeProps>;
