@@ -4,7 +4,6 @@ html:
   embed_svg: true
   offline: false
   toc: undefined
-
 print_background: false
 ---
 
@@ -54,8 +53,8 @@ print_background: false
 
 - 源库 `strokeStart` `strokeEnd` 是 IOS ([说明](https://cloud.tencent.com/developer/article/1153195))设置描边区域，目前Shape、Path不支持，描边可以使用 strokeWidth 设置
 
-- strokeCap、strokeJoin、strokeMiter 这个3个属性与clip 有冲突
-    - 这三个属性是设置路径相交的方式，由于使用了 clip 裁切，边框在外部展示部分会被裁切，因此无法看到。
+- `strokeCap` `strokeJoin` `strokeMiter` 这个3个属性与clip 有冲突
+    - 这三个属性是设置路径描边相交的方式，由于使用了 clip 裁切，边框在外部展示部分会被裁切，因此无法看到。
 
 - translateZ 通过属性传递在 Shape().zIndex(translateZ) 上使用，没有效果；直接在 ClipPath 组件 使用 zIndex(2) 有效果
     - ```jsx
@@ -84,7 +83,7 @@ print_background: false
 ## 源库属性实现
 - svgKey?: string;✅
 - d?: string;✅
-- align?: string; 与 ArcTS 自定义组件有重名 改为 cpAlign ❌
+- align?: string;❌
 - aspect?: string;❌
 - fillRule?: string; ArcTS Shape Path 没有 ❌
 - viewBox?: TViewBox;✅
