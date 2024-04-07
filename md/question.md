@@ -79,9 +79,9 @@ print_background: false
 ArcUI Shape、Path 绘制时的问题
 - 默认按照 viewPort 中定义的 width height 绘制
 - Path 设置宽高没有效果
-- Shape 设置宽高如果与 viewPort 不是同一比例时，绘制的图形居中显示且无法设置其它对齐方式，只能居中
+- Shape 设置宽高如果与 viewPort 不是同一比例时，绘制的图形居中显示且无法设置其它对齐方式，只能居中；Path 会等比缩放适应外层盒子宽高比
 - Shape 设置 clip 属性后，Shape 不设置宽高，绘制图形和裁切路径是对齐的
-- Shape 设置 clip 属性后，Shape 设置宽高，绘制图形和裁切路径没有对齐
+- Shape 设置 clip 属性后，Shape 设置宽高并且比例与 viewBox 绘制路径宽高比不一致，绘制图形和裁切路径没有对齐
 ```js
 build() {
     Column() {
