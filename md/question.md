@@ -73,6 +73,144 @@ print_background: false
 <img src="./001.png" width="400" />
 <img src="./002.png" width="400" />
 
+
+
+## ArcTS clip 对不齐
+ArcUI Shape、Path 绘制时的问题
+- 默认按照 viewPort 中定义的 width height 绘制
+- Path 设置宽高没有效果
+- Shape 设置宽高如果与 viewPort 不是同一比例时，绘制的图形居中显示且无法设置其它对齐方式，只能居中
+- Shape 设置 clip 属性后，Shape 不设置宽高，绘制图形和裁切路径是对齐的
+- Shape 设置 clip 属性后，Shape 设置宽高，绘制图形和裁切路径没有对齐
+```js
+build() {
+    Column() {
+      Text('Shape>Path+Column')
+      Shape() {
+        Path({
+          commands: path
+        })
+        Column() {
+          Text('MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM')
+            .fontColor(Color.Black).fontSize(12).lineHeight(10)
+        }
+      }
+      .clip(new Path({ commands: path }))
+      .viewPort({
+        x: 0,
+        y: 0,
+        width: '400px',
+        height: '400px'
+      })
+      .fill(Color.Red)
+      .backgroundColor(Color.Pink)
+      .strokeWidth(0)
+
+      Text('Shape(w:200,h:100)>Path+Column,clip:false')
+      Shape() {
+        Path({
+          commands: path
+        })
+        Column() {
+          Text('MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM')
+            .fontColor(Color.Black).fontSize(12).lineHeight(10)
+        }
+      }
+      // .clip(new Path({ commands: path }))
+      .viewPort({
+        x: 0,
+        y: 0,
+        width: '400px',
+        height: '400px'
+      })
+      .fill(Color.Red)
+      .backgroundColor(Color.Pink)
+      .strokeWidth(0)
+      .width(200)
+      .height(100)
+
+      Text('Shape(w:200,h:100)>Path+Column,clip: true')
+      Shape() {
+        Path({
+          commands: path
+        })
+        Column() {
+          Text('MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM')
+            .fontColor(Color.Black).fontSize(12).lineHeight(10)
+        }
+      }
+      .clip(new Path({ commands: path }))
+      .viewPort({
+        x: 0,
+        y: 0,
+        width: '400px',
+        height: '400px'
+      })
+      .fill(Color.Red)
+      .backgroundColor(Color.Pink)
+      .strokeWidth(0)
+      .width(200)
+      .height(100)
+
+      Text('Column(w:200,h:100)>Shape>Path+Column,clip: false')
+      Column() {
+        Shape() {
+          Path({
+            commands: path
+          })
+          Column() {
+            Text('MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM')
+              .fontColor(Color.Black).fontSize(12).lineHeight(10)
+          }
+        }
+        // .clip(new Path({ commands: path }))
+        .viewPort({
+          x: 0,
+          y: 0,
+          width: '400px',
+          height: '400px'
+        })
+        .fill(Color.Red)
+        .backgroundColor(Color.Pink)
+        .strokeWidth(0)
+      }
+      .backgroundColor(Color.Yellow)
+      .width(200)
+      .height(100)
+      .alignItems(HorizontalAlign.Start)
+
+      Text('Column(w:200,h:100)>Shape>Path+Column,clip: true')
+      Column() {
+        Shape() {
+          Path({
+            commands: path
+          })
+          Column() {
+            Text('MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM')
+              .fontColor(Color.Black).fontSize(12).lineHeight(10)
+          }
+        }
+        .clip(new Path({ commands: path }))
+        .viewPort({
+          x: 0,
+          y: 0,
+          width: '400px',
+          height: '400px'
+        })
+        .fill(Color.Red)
+        .backgroundColor(Color.Pink)
+        .strokeWidth(0)
+      }
+      .backgroundColor(Color.Yellow)
+      .width(200)
+      .height(100)
+      .alignItems(HorizontalAlign.Start)
+    }
+    .alignItems(HorizontalAlign.Start)
+    .padding(12)
+  }
+```
+<img src="./arcts01.png" />
 <br>
 <br>
 <br>
