@@ -3,12 +3,14 @@
 import type { ViewProps } from "react-native/Libraries/Components/View/ViewPropTypes";
 import type { HostComponent } from "react-native";
 import codegenNativeComponent from "react-native/Libraries/Utilities/codegenNativeComponent";
-import { Int32, WithDefault } from "react-native/Libraries/Types/CodegenTypes"
+import { Int32, WithDefault, Float } from "react-native/Libraries/Types/CodegenTypes"
 
 export interface NativeProps extends ViewProps {
     color?: string;
     openClip?: boolean;
-    fill?: string;
+    fill?: WithDefault<string, '#f00'>;
+    stroke?: WithDefault<string, '#0f0'>;
+    showProperty?: WithDefault<boolean, true>;
   
     svgKey?: string;
     d?: string;
@@ -31,9 +33,9 @@ export interface NativeProps extends ViewProps {
     rotOx?: WithDefault<Int32, 0>;
     rotOy?: WithDefault<Int32, 0>;
     rotPercentageValue?: WithDefault<boolean, false>;
-    sc?: WithDefault<Int32, 1>;
-    scX?: WithDefault<Int32, 1>;
-    scY?: WithDefault<Int32, 1>;
+    sc?: WithDefault<Float, 1>;
+    scX?: WithDefault<Float, 1>;
+    scY?: WithDefault<Float, 1>;
     scO?: WithDefault<Int32, 0>;
     scOx?: WithDefault<Int32, 0>;
     scOy?: WithDefault<Int32, 0>;

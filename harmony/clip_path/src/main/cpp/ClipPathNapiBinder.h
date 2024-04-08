@@ -25,6 +25,9 @@ namespace rnoh {
                 propsObjBuilder.addProperty("color", props->color);
                 propsObjBuilder.addProperty("openClip", props->openClip);
                 propsObjBuilder.addProperty("fill", props->fill);
+                propsObjBuilder.addProperty("stroke", props->stroke);
+                propsObjBuilder.addProperty("showProperty", props->showProperty);
+
                 propsObjBuilder.addProperty("svgKey", props->svgKey);
                 propsObjBuilder.addProperty("d", props->d);
                 propsObjBuilder.addProperty("viewBox", viewBoxArray);
@@ -66,5 +69,3 @@ namespace rnoh {
     };
 
 } // namespace rnoh
-
-
