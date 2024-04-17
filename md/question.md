@@ -56,22 +56,13 @@ print_background: false
 - `strokeCap` `strokeJoin` `strokeMiter` 这个3个属性与clip 有冲突
     - 这三个属性是设置路径描边相交的方式，由于使用了 clip 裁切，边框在外部展示部分会被裁切，因此无法看到。
 
-- translateZ 通过属性传递在 Shape().zIndex(translateZ) 上使用，没有效果；直接在 ClipPath 组件 使用 zIndex(2) 有效果
-    - ```jsx
-        Shape() {
-            Path({
-                commands: this.d,
-            })
-        }
-        .zIndex(this.translateZ) // 无效P
-
-        ClipPathView({
-            translateZ: 1 // 无效
-        })
-        .zIndex(2) // 有效果
-
-<img src="./001.png" width="400" />
-<img src="./002.png" width="400" />
+## IOS `align` `aspect` `fillRule` `strokeStart` `strokeEnd` 效果
+<img src="./ios/001_align_aspect.png" width="400" />
+<img src="./ios/002_align_aspect.png" width="400" />
+<img src="./ios/003_fillRule.png" width="400" />
+<img src="./ios/004_stroke.png" width="400" />
+<img src="./ios/005_stroke.png" width="400" />
+<img src="./ios/006_stroke.png" width="400" />
 
 
 
@@ -223,7 +214,7 @@ build() {
 - d?: string;✅
 - align?: string;❌
 - aspect?: string;❌
-- fillRule?: string; ArcTS Shape Path 没有 ❌
+- fillRule?: string;❌
 - viewBox?: TViewBox;✅
 - strokeWidth?: number;✅
 - strokeCap?: LineCapStyle;✅
@@ -231,7 +222,7 @@ build() {
 - strokeMiter?: number;✅
 - strokeStart?: number;❌
 - strokeEnd?: number;❌
-- translateZ?: number;  存疑,对应使用zindex 无效 ❓
+- translateZ?: number; ✅
 - transX?: number;✅
 - transY?: number;✅
 - transPercentageValue?: boolean; ✅
