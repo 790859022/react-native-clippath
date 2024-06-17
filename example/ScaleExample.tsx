@@ -34,18 +34,6 @@ export default function index() {
         <Text>22222222222222222222222222222222222222222</Text>
       </ClipPathView>
       <Text>--------------------------------------------</Text>
-      <Text>sc: 0.5, scOx: 200, scOy: 200</Text>
-      <ClipPathView sc={0.5} scOx={200} scOy={200} viewBox={viewBox} d={myPath10}  style={{ width: 200, height: 100, backgroundColor: '#ff0' }}>
-        <Text>11111111111111111111111111111111111111111</Text>
-        <Text>22222222222222222222222222222222222222222</Text>
-      </ClipPathView>
-      <Text>--------------------------------------------</Text>
-      <Text>sc: 0.5, scOx: 50, scOy: 50, scPercentageValue: true</Text>
-      <ClipPathView sc={0.5} scOx={50} scOy={50} scPercentageValue={true} viewBox={viewBox} d={myPath10}  style={{ width: 200, height: 100, backgroundColor: '#ff0' }}>
-        <Text>11111111111111111111111111111111111111111</Text>
-        <Text>22222222222222222222222222222222222222222</Text>
-      </ClipPathView>
-      <Text>--------------------------------------------</Text>
       <Text>sc: 0.5, scO: 50, scPercentageValue: true</Text>
       <ClipPathView sc={0.5} scO={50} scPercentageValue={true} viewBox={viewBox} d={myPath10}  style={{ width: 200, height: 100, backgroundColor: '#ff0' }}>
         <Text>11111111111111111111111111111111111111111</Text>
