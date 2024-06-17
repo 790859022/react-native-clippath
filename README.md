@@ -3,7 +3,7 @@
 android: api 21+   
 ios : 10.0+   
 web: svg    
-  
+
  Example --> [Demo](https://github.com/Only-IceSoul/canal/tree/master/react-native/LiquidSwipe/ClipPath)   
 <img src="./src/demo.jpg" width="300">
 
@@ -11,7 +11,7 @@ web: svg
 
 `$ npm install react-native-clippathview --save`  
 `$ react-native link react-native-clippathview`  
-  
+
 ### Yarn
 
 `yarn add react-native-clippathview`
@@ -34,20 +34,42 @@ import {ClipPathView , ClipPathViewH } from 'react-native-clippathview'
 // TODO: What to do with the module?
     <ClipPathView style={{backgroundColor:'green'}} 
 
-       
+
         d={myPath}
         viewBox={myViewBox}
-        
-        
-    
+
+
+
     >
-  
+
         <View >
             <Text style={{color:'white'}}>hello world</Text>
         </View>
-        
+
     </ClipPathView>
 
+```
+## Harmony
+
+```js
+import { View, Text, ScrollView } from 'react-native'
+import React from 'react'
+import { ClipPathView } from 'react-native-clippathview'
+
+export default function index() {
+  const viewBox = [0, 0, 400, 400]
+  const path = 'M 200 0 L 280 100 L 400 160 L 330 270 L 320 400 L 200 350 L 80 400 L 80 270 L 0 160 L 120 100 Z'
+
+  return (
+    <ScrollView style={{  width: '100%', height: '100%' }}>
+      <ClipPath d={path}  style={{ backgroundColor: '#ff0' }}>
+        <Text style={{ lineHeight: 5, fontSize: 6 }}>children</Text>
+        <Text style={{ lineHeight: 5, fontSize: 6 }}>children</Text>
+        <Text style={{ lineHeight: 5, fontSize: 6 }}>children</Text>
+      </ClipPath>
+    </ScrollView>
+  )
+}
 ```
 
 ## Props   
@@ -74,7 +96,7 @@ import {ClipPathView , ClipPathViewH } from 'react-native-clippathview'
 <br>
 
 The percentageValue property refers to the fact that the Origin will be multiplied by the size of the view.  
-  
+
 | Name | type | default |
 | --- | --- | --- |
 | translateZ | Number (zIndex) | 0 |
